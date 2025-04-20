@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Nizam - Frontend Developer</title>
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar Start -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-light" href="#">Nizam</a>
+            <a class="navbar-brand" href="#">Nizam</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -33,97 +31,104 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="home">
-        <div class="hero-content">
-            <div class="hero-animation">
-                <h1 class="display-4 fw-bold">Hi, I'm <span class="text-primary">Nizam</span></h1>
-                <p class="lead"></p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-outline-light ms-3">Contact Me</a>
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1>Hi, I'm <span class="highlight">Nizam</span></h1>
+                    <p class="lead">Frontend Developer crafting smooth user experiences.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center" data-aos="fade-left">
+                    <div class="hero-image">
+                        <img src="./assets/profile.png" alt="Nizam" class="img-fluid rounded-circle">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
+    <section id="about">
         <div class="container">
-            <h2 class="text-center mb-4" data-aos="fade-up">About Me</h2>
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8" data-aos="fade-up" data-aos-delay="200">
-                    <p class="text-center fs-5">
-                        I'm a Frontend Developer passionate about building responsive and user-friendly websites using HTML, CSS, and JavaScript. I enjoy turning designs into functional web experiences and constantly learning to improve my skills.
-                    </p>
+                    <div class="about-content">
+                        <p>I'm a Frontend Developer passionate about building responsive and user-friendly websites using HTML, CSS, and JavaScript. I enjoy turning designs into functional web experiences and constantly learning to improve my skills.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-5">
+    <section id="skills">
         <div class="container">
-            <h2 class="text-center mb-4" data-aos="fade-up">Skills</h2>
-            <div class="row text-center">
-                <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in">
-                    <i class="fab fa-html5 fa-3x text-danger"></i>
-                    <h5 class="mt-2">HTML</h5>
+            <h2 class="section-title" data-aos="fade-up">Skills</h2>
+            <div class="row g-4">
+                <div class="col-6 col-md-3" data-aos="fade-up">
+                    <div class="skill-card">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML</h3>
+                    </div>
                 </div>
-                <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fab fa-css3-alt fa-3x text-primary"></i>
-                    <h5 class="mt-2">CSS</h5>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-card">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS</h3>
+                    </div>
                 </div>
-                <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fab fa-js-square fa-3x text-warning"></i>
-                    <h5 class="mt-2">JavaScript</h5>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-card">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                    </div>
                 </div>
-                <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fab fa-bootstrap fa-3x text-purple"></i>
-                    <h5 class="mt-2">Bootstrap</h5>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fab fa-react fa-3x text-info"></i>
-                    <h5 class="mt-2">React.js</h5>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
-                    <i class="fab fa-git-alt fa-3x text-danger"></i>
-                    <h5 class="mt-2">Git</h5>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="600">
-                    <i class="fab fa-github fa-3x text-light"></i>
-                    <h5 class="mt-2">GitHub</h5>
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-card">
+                        <i class="fab fa-react"></i>
+                        <h3>React</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5">
+    <section id="projects">
         <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">Projects</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4" data-aos="fade-right">
-                    <div class="card h-100">
-                        <img src="./assets/note-app-1.png" class="card-img-top" alt="Notes App">
-                        <div class="card-body">
-                            <h5 class="card-title">Notes App</h5>
-                            <p class="card-text">A clean and responsive notes-taking web app using HTML, CSS, and JavaScript. Uses localStorage for data persistence.</p>
-                            <div class="card-buttons">
+            <h2 class="section-title" data-aos="fade-up">Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/note-app-1.png" alt="Notes App">
+                        </div>
+                        <div class="project-content">
+                            <h3>Notes App</h3>
+                            <p>A clean and responsive notes-taking web app using HTML, CSS, and JavaScript.</p>
+                            <div class="project-links">
                                 <a href="#" class="btn btn-primary" target="_blank">Live Demo</a>
-                                <a href="#" id="gitBtn" class="btn btn-outline-light" target="_blank">GitHub</a>
+                                <a href="#" class="btn btn-outline" target="_blank">GitHub</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4" data-aos="fade-left">
-                    <div class="card h-100">
-                        <img src="./assets/QR-code.png" class="card-img-top" alt="QR Code Generator">
-                        <div class="card-body">
-                            <h5 class="card-title">QR Code Generator</h5>
-                            <p class="card-text">Generate QR codes instantly for any text or URL. Built with modern web technologies.</p>
-                            <div class="card-buttons">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/QR-code.png" alt="QR Code Generator">
+                        </div>
+                        <div class="project-content">
+                            <h3>QR Code Generator</h3>
+                            <p>Generate QR codes instantly for any text or URL. Built with modern web technologies.</p>
+                            <div class="project-links">
                                 <a href="https://nizam-321.github.io/QR-Code-Generator-JavaScript-Practice-Project/" class="btn btn-primary" target="_blank">Live Demo</a>
-                                <a href="https://github.com/nizam-321/QR-Code-Generator-JavaScript-Practice-Project" class="btn btn-outline-light" target="_blank">GitHub</a>
+                                <a href="https://github.com/nizam-321/QR-Code-Generator-JavaScript-Practice-Project" class="btn btn-outline" target="_blank">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -133,31 +138,35 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-4" data-aos="fade-up">Contact Me</h2>
-            <p class="mb-4 fs-5" data-aos="fade-up" data-aos-delay="100">Let's work together on your next project!</p>
-            <div class="contact-links" data-aos="fade-up" data-aos-delay="200">
-                <a href="mailto:nizam.work.dev@gmail.com" class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email</span>
-                </a>
-                <a href="https://www.linkedin.com/in/nizam-ahmed-833090357/" class="contact-item" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://github.com/nizam-321" class="contact-item" target="_blank">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <p class="contact-intro" data-aos="fade-up">Let's work together on your next project!</p>
+                    <div class="contact-links" data-aos="fade-up">
+                        <a href="mailto:nizam.work.dev@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nizam-ahmed-833090357/" class="contact-item" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/nizam-321" class="contact-item" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-4">
+    <footer>
         <div class="container text-center">
-            <p class="mb-0">© 2024 Nizam. All rights reserved.</p>
+            <p>© 2024 Nizam. All rights reserved.</p>
         </div>
     </footer>
 

@@ -1,4 +1,4 @@
-// Smooth scrolling for navigation links
+// Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,19 +8,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Enhanced navbar scroll effect
+// Navbar scroll effect
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
-    const scrollPosition = window.scrollY;
-    
-    if (scrollPosition > 50) {
+    if (window.scrollY > 50) {
         navbar.classList.add('navbar-scrolled');
     } else {
         navbar.classList.remove('navbar-scrolled');
     }
 });
 
-// Improved typing animation
+// Typing animation
 const typeWriter = () => {
     const text = "Frontend Developer crafting smooth user experiences.";
     const speed = 70;
@@ -28,68 +26,15 @@ const typeWriter = () => {
     
     const type = () => {
         if (index < text.length) {
-            const currentText = text.substring(0, index + 1);
-            document.querySelector('.lead').textContent = currentText;
+            document.querySelector('.lead').textContent = text.substring(0, index + 1);
             index++;
             setTimeout(type, speed);
-        } else {
-            // Add cursor blink effect after typing
-            document.querySelector('.lead').classList.add('typing-done');
         }
     };
     type();
 };
 
-// Enhanced scroll animations
-const scrollAnimations = () => {
-    const elements = document.querySelectorAll('[data-aos]');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('aos-animate');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    elements.forEach(element => observer.observe(element));
-};
-
-// Skills animation
-const skillIcons = document.querySelectorAll('#skills i');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('skill-animation');
-        }
-    });
-}, { threshold: 0.5 });
-
-skillIcons.forEach(icon => {
-    observer.observe(icon);
-});
-
-// Project cards hover effect
-document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.classList.add('card-hover');
-    });
-    card.addEventListener('mouseleave', function() {
-        this.classList.remove('card-hover');
-    });
-});
-
-// Initialize all animations on load
-window.addEventListener('load', () => {
-    typeWriter();
-    scrollAnimations();
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100
-    });
-});
-
-// Handle mobile menu close on link click
+// Mobile menu handling
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -97,4 +42,9 @@ document.querySelectorAll('.nav-link').forEach(link => {
             document.querySelector('.navbar-toggler').click();
         }
     });
+});
+
+// Initialize animations
+window.addEventListener('load', () => {
+    typeWriter();
 });
